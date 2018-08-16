@@ -70,27 +70,15 @@ class ChatScreen extends Component {
 
   render() {
     return (
-      <div style={{
-        display: 'flex',
-        height: '100vh'
-      }}>
+      <div className="container">
 
-        <div style={{
-          width: '30%',
-          backgroundColor: '#cdeadf'
-        }}>
+        <div className="sidebar">
           <h2>Who's online</h2>
           <WhosOnlineList users={this.state.currentRoom.users} />
         </div>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column'
-        }}>
-          ChatScreen
-         <div style={{
-           flex: '1',
-         }}>
+        <div className="chat-screen__container">
+         <div className="chat-screen">
            <MessageList messages={this.state.messages} />
          </div>
           <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />

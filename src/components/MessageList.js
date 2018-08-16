@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class MessageList extends Component {
   render() {
     return (
-      <ul>
+      <ul className="message-list">
         {this.props.messages.map((message, index) => (
           <li key={index}>
             <div>
