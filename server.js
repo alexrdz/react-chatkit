@@ -1,4 +1,5 @@
 // @flow
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -7,8 +8,8 @@ const Chatkit = require('@pusher/chatkit-server')
 const app = express()
 
 const chatkit = new Chatkit.default({
-  instanceLocator: 'v1:us1:33923be5-e0df-4fd8-95cc-53f75e6edc39',
-  key: 'a60593cd-ce94-4e9c-bfed-62c17f34504b:crNzUvhCIOIrSWYZpO0CakiRNeyhj6zu2YTNgUOK/ck='
+  instanceLocator: process.env.INSTANCE_LOCATOR,
+  key: process.env.KEY
 })
 
 app.use(bodyParser.urlencoded({ extended: false }))
