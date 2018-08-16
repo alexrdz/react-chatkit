@@ -4,6 +4,74 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Source Sans Pro", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 200;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #25102d;
+  color: #e8e0ea;
+  padding: 5%;
+  width: 30%;
+}
+
+.sidebar h2 {
+  letter-spacing: -.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.sidebar ul li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+.sidebar ul li::before {
+  background-color: #269ed8;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 10px;
+  margin-right: 1rem;
+  width: 10px;
+}
+
+
+
+.chat-screen__container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.chat-screen {
+  flex: 1;
+  width: 100%;
+}
+
+
+.message-list li {
+  padding: 1rem 2rem;
+}
+
+.message-list li span {
+  font-weight: bold;
+}
+
+.typing-indicator {
+  border-bottom: 1px solid #ccc;
+  font-size: 10px;
+  padding: .5rem 1rem;
+}
+
+.message-form form {
+  display: flex;
+}
+.message-form input {
+  border: none;
+  padding: 2rem 1rem;
+  width: 100%;
 }

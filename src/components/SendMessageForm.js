@@ -19,10 +19,9 @@ class SendMessageForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="message-form">
         <form onSubmit={this.onSubmit}>
-          <input type="text" placeholder="what is your text?" onChange={this.onChange} />
-          <input type="submit" value="Submit" />
+          <input type="text" placeholder="Type your message (and hit Enter)" onChange={this.onChange} />
         </form>
       </div>
     );
