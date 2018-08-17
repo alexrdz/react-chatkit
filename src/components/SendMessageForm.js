@@ -14,7 +14,8 @@ class SendMessageForm extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state.text)
+    this.props.onSubmit(this.state.text);
+    this.setState(() => ({text: ''}));
   }
 
   render() {

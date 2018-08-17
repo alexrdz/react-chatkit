@@ -6,7 +6,7 @@ class WhosOnlineList extends Component {
       return (
       <ul>
         {this.props.users.map((user, index) => (
-          <li key={user.name}>{user.name} ({user.presence.state})</li>
+          <li key={user.name} className={user.presence.state}>{user.name} ({user.presence.state})</li>
         ))}
       </ul>
     )
